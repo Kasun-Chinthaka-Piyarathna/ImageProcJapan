@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.Group?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color:  #6D7B8D">
+
+    <center>
+        <AnchorPane maxHeight="Infinity" maxWidth="-Infinity"
+                    style="-fx-background-position: center" fx:id="anchorpane">
+
+
+            <children>
+
+                <ImageView fx:id="imageView" fitHeight="280.0" fitWidth="500.0" layoutY="20"
+                           pickOnBounds="true"
+                           preserveRatio="true" style="-fx-background-color: black">
+                    <!--<HBox.margin>-->
+                    <!--<Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+                    <!--</HBox.margin>-->
+                </ImageView>
+                <ImageView fx:id="resultImageView" fitHeight="280.0" fitWidth="500.0" layoutY="300"
+                           pickOnBounds="true"
+                           preserveRatio="true" style="-fx-background-color: white">
+                    <!--<HBox.margin>-->
+                    <!--<Insets bottom="10.0" right="10.0" top="10.0"/>-->
+                    <!--</HBox.margin>-->
+                </ImageView>
+            </children>
+
+
+            <!--</HBox>-->
+        </AnchorPane>
+    </center>
+
+
+    <bottom>
+        <HBox prefHeight="138.0" prefWidth="800.0" style="-fx-alignment: center" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="25" left="25" right="25" top="25"/>
+            </padding>
+            <Button fx:id="button" style="-fx-background-color: #D1D0CE" contentDisplay="BOTTOM" mnemonicParsing="false"
+                    onAction="#uploadButtonClickAction"
+                    text="%upload" textAlignment="CENTER"/>
+            <Button fx:id="resetButton" style="-fx-background-color: #D1D0CE" mnemonicParsing="false"
+                    onAction="#resetImage" text="%reset">
+                <HBox.margin>
+                    <Insets left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="readButton" style="-fx-background-color: #D1D0CE" onAction="#readText"
+                    mnemonicParsing="false" text="%generate">
+                <HBox.margin>
+                    <Insets left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="changelanguage" style="-fx-background-color: #D1D0CE"
+                    mnemonicParsing="false" text="Change Language" onAction="#changelanguage">
+                <HBox.margin>
+                    <Insets left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <!--<Button fx:id="faceDetector" style="-fx-background-color: #D1D0CE" onAction="#FaceDetectionImage"-->
+            <!--mnemonicParsing="false" text="Face Detector">-->
+            <!--<HBox.margin>-->
+            <!--<Insets left="10.0"/>-->
+            <!--</HBox.margin>-->
+            <!--</Button>-->
+
+        </HBox>
+    </bottom>
+    <left>
+        <VBox prefHeight="470.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <Accordion expandedPane="$edgedetection">
+                    <panes>
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%edge_detection"
+                                    fx:id="edgedetection">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="600.0" prefWidth="323.0">
+                                    <children>
+                                        <TextField fx:id="textThresholdMin" layoutX="120.0" layoutY="85.0"
+                                                   prefHeight="26.0" prefWidth="52.0"/>
+                                        <Separator layoutX="21.0" layoutY="158.0" prefHeight="0.0" prefWidth="281.0">
+                                            <opaqueInsets>
+                                                <Insets left="5.0" right="5.0"/>
+                                            </opaqueInsets>
+                                        </Separator>
+                                        <Slider fx:id="thresholdMin" layoutX="179.0" layoutY="90.0"/>
+                                        <Label layoutX="14.0" layoutY="90.0" text="%threshold_min"/>
+                                        <CheckBox fx:id="automaticDetection" layoutX="14.0" layoutY="45.0"
+                                                  mnemonicParsing="false" onAction="#automaticCannyEdgeDetection"
+                                                  text="%autonatic_edge_detection"/>
+                                        <TextField fx:id="textThresholdMax" layoutX="120.0" layoutY="119.0"
+                                                   prefHeight="26.0" prefWidth="52.0"/>
+                                        <Slider fx:id="thresholdMax" layoutX="179.0" layoutY="124.0"/>
+                                        <Label layoutX="14.0" layoutY="124.0" text="%threshold_max"/>
+                                        <Label layoutX="14.0" layoutY="14.0" text="%canny_edge_detection"/>
+                                        <Label layoutX="14.0" layoutY="169.0" text="%sobal_edge_detection"/>
+                                        <Slider fx:id="sobelXValue" layoutX="122.0" layoutY="196.0" prefHeight="16.0"
+                                                prefWidth="93.0"/>
+                                        <Label layoutX="26.0" layoutY="196.0" text="%x-direvative"/>
+                                        <Label layoutX="26.0" layoutY="235.0" text="%y-direvative"/>
+                                        <Slider fx:id="sobelYValue" layoutX="122.0" layoutY="235.0" prefHeight="16.0"
+                                                prefWidth="93.0"/>
+                                        <Separator layoutX="21.0" layoutY="271.0" prefHeight="0.0" prefWidth="281.0">
+                                            <opaqueInsets>
+                                                <Insets left="5.0" right="5.0"/>
+                                            </opaqueInsets>
+                                        </Separator>
+                                        <Label layoutX="14.0" layoutY="282.0" text="%scharr_edge_detection"/>
+                                        <Slider fx:id="scharrXValue" layoutX="122.0" layoutY="309.0" prefHeight="16.0"
+                                                prefWidth="93.0"/>
+                                        <Label layoutX="26.0" layoutY="309.0" text="x-direvative"/>
+                                        <Label layoutX="26.0" layoutY="348.0" text="y-direvative"/>
+                                        <Slider fx:id="scharrYValue" layoutX="122.0" layoutY="348.0" prefHeight="16.0"
+                                                prefWidth="93.0"/>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #D1D0CE" animated="true" text="%filtering">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #B7CEEC" prefHeight="600.0" prefWidth="200.0">
+                                    <fx:include fx:id="filterSetting" source="/fxml/filters.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <!--<TitledPane style="-fx-background-color: #D1D0CE" animated="true" text="shape-detection">-->
+                            <!--<content>-->
+                                <!--<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="200.0">-->
+                                    <!--<fx:include fx:id="objectdetection" source="/fxml/ObjRecognition.fxml"/>-->
+                                <!--</AnchorPane>-->
+                            <!--</content>-->
+                        <!--</TitledPane>-->
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%inter_circle_distance">
+                            <content >
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" style="-fx-background-color: #B7CEEC" prefWidth="200.0">
+                                    <fx:include fx:id="intercircledistance" source="/fxml/InterCircleDistance.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%arc_detection">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="800.0" prefWidth="200.0">
+                                    <fx:include fx:id="arc_detection" source="/fxml/arcLength.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%image_scaling">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="800.0" prefWidth="200.0">
+                                    <fx:include fx:id="image_scale" source="/fxml/ImageScale.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+
+                    </panes>
+                </Accordion>
+            </children>
+        </VBox>
+    </left>
+
+    <right>
+        <VBox prefHeight="1500.0" maxWidth="Infinity" BorderPane.alignment="CENTER">
+            <children>
+                <Accordion expandedPane="$myPane1">
+                    <panes>
+
+
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%fps_tracker"
+                                    fx:id="myPane1">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0"  style="-fx-background-color: #B7CEEC" prefHeight="1200.0" prefWidth="400.0">
+                                    <fx:include fx:id="fpsdisplay" source="/fxml/fpstracker.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%object_detection"
+                                    fx:id="myPane2">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="600.0" prefWidth="400.0">
+                                    <fx:include fx:id="objectdetecting" source="/fxml/objectDetector.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #B7CEEC" animated="true" text="%camera_calibration"
+                                    fx:id="myPane3">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="1000.0" prefWidth="400.0">
+                                    <fx:include fx:id="cameracalibration" source="/fxml/cameracalibration.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane style="-fx-background-color: #D1D0CE" animated="true" text="%video_binarization"
+                                    fx:id="myPane4">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="600.0" prefWidth="400.0">
+                                    <fx:include fx:id="vbinary" source="/fxml/videobinarization.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+
+
+                        <TitledPane style="-fx-background-color: #D1D0CE" animated="true" text="%mouse_click_count"
+                                    fx:id="myPane5">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="400.0">
+                                    <fx:include fx:id="mouseclickcount" source="/fxml/mouseclickcount.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+
+                        <TitledPane style="-fx-background-color: #D1D0CE" animated="true" text="%shape_detection"
+                                    fx:id="myPane6">
+                            <content>
+                                <AnchorPane minHeight="0.0"  style="-fx-background-color: #B7CEEC" minWidth="0.0" prefHeight="700.0" prefWidth="400.0">
+                                    <fx:include fx:id="detectshapes" source="/fxml/detectTri_Rec_Pol_Hex.fxml"/>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </children>
+        </VBox>
+
+
+    </right>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER" layoutY="100.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="%file">
+                    <items>
+                        <MenuItem onAction="#openSaveDialog" mnemonicParsing="false" text="Save"/>
+                        <MenuItem onAction="#closeStage" mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%edit">
+                    <items>
+                        <CheckMenuItem fx:id="greyscale" mnemonicParsing="false" onAction="#convertGrey"
+                                       text="Grey Scale"/>
+                        <MenuItem mnemonicParsing="false" onAction="#openThresholdWindow" text="Convert HSV"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

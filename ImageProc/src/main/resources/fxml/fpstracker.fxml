@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane maxHeight="600.0" prefHeight="489.0" prefWidth="364.0" style="-fx-background-position: center;-fx-background-color: #B7CEEC" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FPSController">
+   <children>
+
+      <!--<Button fx:id="playvedio" layoutX="70.0" layoutY="338.0" mnemonicParsing="false"  text="Play a vedio" />-->
+      <Button fx:id="playvedio2" layoutX="3.0" layoutY="398.0" mnemonicParsing="false" onAction="#playvedio" text="%play_a_vedio" />
+      <Button fx:id="displayfps" layoutX="103.0" layoutY="398.0" mnemonicParsing="false" onAction="#fps" text="%display_fps" />
+      <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="350.0" layoutX="6.0" layoutY="4.0" />
+      <TextField fx:id="cycle_count" layoutX="180.0" layoutY="209.0" />
+      <TextField fx:id="current_rate" layoutX="180.0" layoutY="235.0" />
+      <TextField fx:id="current_time" layoutX="180.0" layoutY="262.0" />
+      <TextField layoutX="3.0" layoutY="208.0" text="%cycle_count" />
+      <TextField layoutX="2.0" layoutY="236.0" text="%current_rate" />
+      <TextField layoutX="2.0" layoutY="262.0" text="%current_time" />
+      <TextField layoutX="2.0" layoutY="289.0" text="%cycle_duration(Total_duration)" />
+      <TextField fx:id="cycle_duration" layoutX="180.0" layoutY="289.0" />
+      <TextField layoutX="2.0" layoutY="317.0" text="%frames_per_second" />
+      <TextField fx:id="setfpx" layoutX="179.0" layoutY="316.0" />
+      <TextField layoutX="1.0" layoutY="342.0" text="%clip_length" />
+      <TextField fx:id="cliplength" layoutX="179.0" layoutY="343.0" />
+      <TextField layoutX="1.0" layoutY="370.0" text="%time_lapsey" />
+      <TextField fx:id="lapsey" layoutX="179.0" layoutY="369.0" />
+      <Button fx:id="takeframes" layoutX="199.0" layoutY="399.0" mnemonicParsing="false" onAction="#takeframesbyframes" text="%take_frame_by_frame" />
+   </children>
+</AnchorPane>

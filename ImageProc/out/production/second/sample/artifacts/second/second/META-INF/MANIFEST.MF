@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Created-By: JavaFX Packager
+Implementation-Vendor: 
+Implementation-Title: 
+Implementation-Version: 
+Main-Class: sample.Main
+Class-Path: 
+Permissions: sandbox
+JavaFX-Version: 9
+

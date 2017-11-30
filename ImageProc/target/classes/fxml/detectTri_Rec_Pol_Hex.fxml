@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="390.0" style="-fx-background-color: #B7CEEC;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShapeDetector">
+   <children>
+      <Button fx:id="detectshapes" layoutX="255.0" layoutY="109.0" mnemonicParsing="false" onAction="#detectshapes" text="%detect_shapes" />
+      <ImageView fx:id="image1" fitHeight="223.0" fitWidth="240.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="text_shape" layoutX="97.0" layoutY="252.0" text="Display" />
+      <TextField layoutX="-1.0" layoutY="295.0" prefHeight="26.0" prefWidth="155.0" text="%minimum_angle_cos" />
+      <TextField fx:id="s1" layoutX="158.0" layoutY="294.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField layoutX="-1.0" layoutY="330.0" prefHeight="26.0" prefWidth="155.0" text="%maximum_angle_cos" />
+      <TextField fx:id="s2" layoutX="158.0" layoutY="330.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField layoutX="-1.0" layoutY="366.0" prefHeight="26.0" prefWidth="155.0" text="%relevant_range" />
+      <TextField fx:id="s3" layoutX="158.0" layoutY="366.0" prefHeight="26.0" prefWidth="226.0" />
+      <Button fx:id="toexcel" layoutX="4.0" layoutY="402.0" mnemonicParsing="false" onAction="#ToExcel" text="%add_to_excell" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="390.0" style="-fx-background-color: #B7CEEC" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InterCircleDistance">
+   <children>
+      <Button fx:id="uploadimg" layoutX="127.0" layoutY="255.0" mnemonicParsing="false" onAction="#uploadimg" text="%upload_image" />
+      <ImageView fx:id="imgg1" fitHeight="230.0" fitWidth="294.0" layoutX="43.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txt1" layoutX="66.0" layoutY="342.0" prefHeight="32.0" prefWidth="254.0" />
+      <TextField fx:id="t1" layoutX="12.0" layoutY="301.0" prefHeight="26.0" prefWidth="176.0" />
+      <TextField fx:id="t2" layoutX="195.0" layoutY="301.0" prefHeight="26.0" prefWidth="176.0" />
+   </children>
+</AnchorPane>

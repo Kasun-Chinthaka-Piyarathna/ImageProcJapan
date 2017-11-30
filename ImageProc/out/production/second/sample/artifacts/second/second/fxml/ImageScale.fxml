@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="353.0" style="-fx-background-color:  #B7CEEC" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ImageScale">
+    <children>
+        <Button fx:id="imagescale" layoutX="129.0" layoutY="191.0" mnemonicParsing="false" onAction="#imagescale" text="%test_now" />
+      <DialogPane  style="-fx-background-color:  #B7CEEC;-fx-font-style: italic" contentText="To test this feature, First of all you have to upload the image. Then it will automatically find the exact resolution .And  You can also convert it to \na defined resolution." headerText="Scale display on screen " layoutX="1.0" layoutY="73.0" prefHeight="119.0" prefWidth="353.0" />
+    </children>
+</AnchorPane>

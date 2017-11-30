@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="cameracalibration" style="-fx-background-color: #B7CEEC;" prefHeight="180.0" prefWidth="417.0"  xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CC_Controller">
+    <children>
+
+        <Label alignment="center" text="%number_of_samples_for_the_calibration" />
+        <TextField fx:id="numBoards" alignment="center" layoutY="20" maxWidth="50" text="20" />
+        <Label alignment="center" layoutY="50" text="%number_of_horizontal_corners_we_have_in_the_test_image" />
+        <TextField fx:id="numHorCorners" alignment="center" layoutY="70" maxWidth="50" text="14" />
+        <Label alignment="center" layoutY="100" text="%the_number_of_vertical_corners_we_have_in_the_test_image" />
+        <TextField fx:id="numVertCorners" alignment="center" layoutY="120" maxWidth="50" text="9" />
+        <Button fx:id="applyButton" alignment="center" layoutY="153.0" onAction="#updateSettings" text="%apply_now" />
+        <!--</HBox>-->
+        <Separator />
+        <!--<ImageView fx:id="originalFrame" fitHeight="271.0" layoutX="100.0" fitWidth="497.0" />-->
+
+
+        <ImageView fx:id="calibratedFrame" layoutY="130" />
+
+        <ImageView fx:id="originalFrame" layoutY="180.0" />
+        <Button fx:id="snapshotButton" alignment="center" disable="true" layoutX="114.0" layoutY="153.0" onAction="#takeSnapshot" text="%take_snapshot" />
+        <Button fx:id="cameraButton" alignment="center" disable="true" layoutX="256.0" layoutY="153.0" onAction="#startCamera" text="%start_camera" />
+
+
+    </children>
+</AnchorPane>
