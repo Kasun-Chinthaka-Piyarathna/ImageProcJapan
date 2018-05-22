@@ -4,38 +4,14 @@
 <h1>Image Processing R&D using OpenCV and JavaFx</h1>
 </head>
 <body>
-  <div class="row">
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Fjords" width="200" height="300" float="left">
-  </div>
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Forest"  width="200" height="300" float="left">
-  </div>
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Mountains"  width="200" height="300" float="left">
-  </div>
-    <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Mountains"  width="200" height="300" float="left">
-  </div>
-</div>
-  <div class="row">
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Fjords" width="200" height="300" float="left">
-  </div>
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Forest"  width="200" height="300" float="left">
-  </div>
-  <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Mountains"  width="200" height="300" float="left">
-  </div>
-    <div class="column">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aspen-PopulusTremuloides-2001-09-27.jpg/220px-Aspen-PopulusTremuloides-2001-09-27.jpg" alt="Mountains"  width="200" height="300" float="left">
-  </div>
-</div>
-  
-
-<br />
-
+  <table style="width:100%">
+  <tr>
+    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th>
+    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th> 
+    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th>
+  </tr>
+ 
+</table>
 
 <h2>What is this repository for?</h2>
 
