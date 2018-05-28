@@ -6,9 +6,12 @@
 <body>
   <table style="width:100%">
   <tr>
-    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th>
-    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th> 
-    <th><img src="screenshots/s1.png" alt="loading screenshot"  width="200" height="300"</th>
+    <th><img src="screenshots/s19.png" alt="loading screenshot"  width="450" height="250"</th>
+    <th><img src="screenshots/s5.png" alt="loading screenshot"  width="450" height="250"</th> 
+  </tr>
+      <tr>
+    <th><img src="screenshots/s18.png" alt="loading screenshot"  width="450" height="250"</th>
+    <th><img src="screenshots/s11.png" alt="loading screenshot"  width="450" height="250"</th> 
   </tr>
  
 </table>
